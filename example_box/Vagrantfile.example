@@ -1,0 +1,10 @@
+Vagrant.require_plugin "vagrant-openstack"
+
+Vagrant.configure("2") do |config|
+  config.vm.provider :openstack do |openstack|
+    openstack.os_endpoint = "http://10.2.4.129:5000/v2.0/"
+    openstack.os_username = "sahni"
+    openstack.os_password = "password"
+    openstack.os_tenant_name = "sahni"
+  end
+end
